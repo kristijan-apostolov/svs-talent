@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<form action="#" th:action="@{/creditcard}" method="post">
+		Card number:<input type="text" name="cardNumber" /><br /> 
+		Name on card:<input type="text" name="nameOnCard" /><br />
+		Expiration month:<input type="text" name="expirationMonth" /><br />
+		Expiration year:<input type="text" name="expirationYear" /><br />
+		CVC2/CVV2:<input type="text" name="cvc" /><br />
+		<input type="submit" value="Add credit card" />
+	</form><br/>
+	<table>
+		<tr>
+			<td th:text="${message}">Message</td>
+		</tr>
+	</table>
+	<a th:href="@{/shop}">Back to shop</a>
+</body>
+</html>

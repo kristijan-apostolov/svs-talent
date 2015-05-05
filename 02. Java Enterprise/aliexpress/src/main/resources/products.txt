@@ -1,0 +1,5 @@
+01|Death Star|500|5
+02|Lightsaber|1000|1
+03|Dragon Ball|9001|7
+04|Batmobile|900|7
+05|Elder Wand|300|10

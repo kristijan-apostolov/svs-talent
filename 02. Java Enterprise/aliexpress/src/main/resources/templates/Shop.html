@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+td {
+	padding: 5px;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<a th:href="@{/accountRegistration}">Account Registration</a><br/><br/>
+	<table border="1">
+		<tr>
+			<td>Product</td>
+			<td>Price</td>
+		</tr>
+		<tr th:each="product : ${products}">
+			<td th:text="${product.name}">Name</td>
+			<td th:text="${product.price}">Price</td>
+			<td><a th:href="@{/shop/{key}(key=${product.key})}">Add to
+					Basket</a></td>
+		</tr>
+	</table>
+	<br />
+	<form action="#" th:action="@{/checkout}" method="post">
+	E-Mail:<input type="text" name="email" />
+	--- Password:<input type="password" name="password" /><br /><br />
+	<input type="submit" value="Checkout" />
+	</form>
+</body>
+</html>
